@@ -1,0 +1,133 @@
+/* App.css */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background: linear-gradient(90deg, #4e54c8, #8f94fb);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-bar {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-section {
+  max-width: 600px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden; /* Ensures text hides when animated */
+  border-right: 2px solid black; /* Simulates a typing cursor */
+  width: 0; /* Start with no width for the typing effect */
+  animation: typing 1s steps(30, end), blink 0.75s step-end infinite;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden; /* Ensures text hides when animated */
+  border-right: 2px solid rgb(170, 170, 170); /* Simulates a typing cursor */
+  width: 0; /* Start with no width for the typing effect */
+  animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+  animation-delay: 0s, 2s; /* Ensures blinking continues during typing delay */
+  animation-iteration-count: infinite; /* Loop typing and erasing */
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  30% {
+    width: 100%; /* Fully typed */
+  }
+  70% {
+    width: 100%; /* Pause before erasing */
+  }
+  100% {
+    width: 0; /* Erase */
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent; /* Blinking effect for the cursor */
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.cta-button {
+  background: linear-gradient(90deg, #000000, #bebebe);
+  background-size: 200% 200%;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 999px; /* Pill-shaped */
+  cursor: pointer;
+  transition: background 0.3s ease;
+  animation: gradient-move 3s infinite; /* Continuous animation */
+}
+
+.cta-button:hover {
+  opacity: 0.9; /* Slightly dim on hover */
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

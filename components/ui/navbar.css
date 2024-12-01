@@ -1,0 +1,129 @@
+/* Navbar.css */
+
+.navbar-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.navbar-text {
+  color: black;
+  font-size: 16px;
+  text-align: center;
+}
+
+.navbar-container {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1000px;
+  width: 100%;
+  z-index: 50;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.menu-oa {
+  font-size: 1.2rem; /* Adjust size as needed */
+  font-weight: 800;
+}
+.menu-container {
+  display: flex;
+  gap: 20px;
+  padding: 12px 32px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Adds the blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  align-items: center; /* Centers content vertically */
+}
+.menu-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.menu-title {
+  color: black;
+  font-weight: 500;
+  transition: opacity 0.3s;
+}
+
+.menu-title:hover {
+  opacity: 0.9;
+}
+
+.submenu-container {
+  position: absolute;
+  top: calc(100% + 1.2rem);
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 16px;
+}
+
+.submenu-box {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.submenu-content {
+  padding: 16px;
+}
+
+.product-grid {
+  display: grid;
+  gap: 20px;
+  padding: 16px;
+}
+.product-item {
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
+  align-items: center;
+  overflow: visible; /* Ensure full text is visible */
+  min-width: 200px;
+}
+
+.product-image {
+  flex-shrink: 0;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  height: 100px;
+  width: 100px;
+}
+
+.product-title {
+  font-size: 16px; /* Match the menu items font size */
+  font-weight: 500; /* Match menu items' font weight */
+  margin-bottom: 8px;
+  color: black;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.product-description {
+  color: #555;
+  font-size: 14px; /* Optional, slightly smaller than title */
+  line-height: 1.4; /* Ensure better readability */
+}
+
+.hovered-link {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+  padding-bottom: 10px;
+}
+
+.hovered-link:hover {
+  color: black;
+}
